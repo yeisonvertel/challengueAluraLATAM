@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="encriptador">
+    <div class="div">
+      <div class="text-wrapper" onclick="mostrarCampoTexto()">
+        <p id="displayText">Ingrese el texto aquí</p>
+        <textarea id="inputText" style="display: none;" oninput="ajustarAltura(this)"></textarea>
+      </div>
+
+      <div class="frame">
+        <button class="button-2" onclick="encriptarTexto()">Encriptar</button>
+        <button class="button-3" onclick="desencriptarTexto()">Desencriptar</button>
+      </div>
+      <div class="frame-2">
+        <img class="bi-exclamation" src="img/bi-exclamation-circle-fill.svg" />
+        <p class="p">Solo letras minúsculas y sin acentos</p>
+      </div>
+      <div class="frame-3">
+        <img class="muñeco" src="img/Muñeco.png" />
+        <div class="text-wrapper-2">Ningún mensaje fue encontrado</div>
+        <p class="text-wrapper-3">Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <div class="overlap-group" style="display: none;">
+        <p class="text-wrapper-4"></p>
+        <button class="button" onclick="copiarTexto()">Copiar</button>
+      </div>
+    </div>
+    <img class="logo" src="img/logo.png" />
+  </div>
+  <script src="encriptador.js"></script>
+</body>
+
+</html>
