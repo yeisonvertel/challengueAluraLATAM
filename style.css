@@ -1,31 +1,39 @@
 .encriptador {
   background-color: #f3f5fc;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
 .encriptador .div {
   background-color: var(--light-bluelight-blue-100);
-  width: 940px;
-  height: 585px;
-  position: relative;
+  width: 100%;
+  height: 530px;
+  position: absolute;
 }
+
 
 .encriptador .text-wrapper {
   position: relative;
   width: 600px;
   top: 90px;
   font-family: "Inter", Helvetica;
-  font-weight: 400;
+  font-weight: 200;
   color: var(--dark-bluedark-blue-300);
   font-size: 23px;
   letter-spacing: 0;
-  left: 70px;
-  line-height: 35px;
+  left: 150px;
+  line-height: 25px;
   height: auto;
 }
+
+.encriptador .text-wrapper textarea {
+  max-height: 200px;
+  /* Por ejemplo, ajusta este valor según tus necesidades */
+  overflow-y: auto;
+}
+
 
 .encriptador .frame {
   display: flex;
@@ -33,11 +41,11 @@
   align-items: flex-start;
   gap: 24px;
   position: absolute;
-  top: 510px;
-  left: 70px;
+  top: 450px;
+  left: 150px;
 }
 
-.encriptador .button-2{
+.encriptador .button-2 {
   all: unset;
   box-sizing: border-box;
   position: relative;
@@ -52,7 +60,13 @@
   line-height: normal;
   background-color: var(--dark-bluedark-blue-300);
   border-radius: 15px;
+  cursor: pointer;
 }
+
+.button-2:hover {
+  background-color: var(--dark-bluedark-blue-500);
+}
+
 
 .encriptador .button-3 {
   all: unset;
@@ -67,14 +81,20 @@
   font-size: 14px;
   line-height: normal;
   border-radius: 15px;
-  background-color:  var(--light-bluelight-blue-300);
+  background-color: var(--light-bluelight-blue-300);
   border: 1px solid;
+  cursor: pointer;
+}
+
+.button-3:hover {
+  background-color: var(--white);
 }
 
 .encriptador .button {
-  all: unset;
-  box-sizing: border-box;
   position: absolute;
+  top: 300px;
+  right: 15px;
+  box-sizing: border-box;
   display: flex;
   padding: 12px;
   width: 250px;
@@ -85,10 +105,13 @@
   text-align: center;
   line-height: normal;
   border-radius: 15px;
-  top: 460px;
-  left: 30px;
-  background-color:  var(--white);
+  background-color: var(--white);
   border: 1px solid;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--light-bluelight-blue-300);
 }
 
 .encriptador .frame-2 {
@@ -96,8 +119,8 @@
   align-items: center;
   gap: 8px;
   position: absolute;
-  top: 485px;
-  left: 70px;
+  top: 425px;
+  left: 150px;
 }
 
 .encriptador .bi-exclamation {
@@ -121,15 +144,15 @@
 }
 
 .encriptador .frame-3 {
+  position: absolute;
+  right: 50px;
   display: flex;
   flex-direction: column;
   width: 280px;
   height: 380px;
   align-items: flex-start;
   gap: 10px;
-  position: absolute;
-  top: 150px;
-  left: 780px;
+  top: 110px;
   background-color: var(--light-bluelight-blue-100);
   border-radius: 32px;
   box-shadow: var(--shadow);
@@ -190,11 +213,84 @@
 .encriptador .overlap-group {
   display: none;
   position: absolute;
-  width: 310px;
-  height: 530px;
-  top: 30px;
-  left: 750px;
+  width: 280px;
+  height: 400px;
+  top: 90px;
+  right: 50px;
   background-color: var(--white);
   border-radius: 32px;
   box-shadow: var(--shadow);
+}
+
+.encriptador .text-wrapper-4 {
+  max-height: 260px;
+  overflow-y: auto;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.encriptador .text-wrapper-4::-webkit-scrollbar {
+  width: 8px;
+}
+
+.encriptador .text-wrapper-4::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+.encriptador .text-wrapper-4::-webkit-scrollbar-thumb {
+  background-color: var(--dark-bluedark-blue-300);
+  border-radius: 4px;
+}
+
+.encriptador .text-wrapper-4::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-bluedark-blue-500);
+}
+
+
+.encriptador #inputText::-webkit-scrollbar {
+  width: 8px;
+}
+
+.encriptador #inputText::-webkit-scrollbar-track {
+  background-color: var(--white)
+}
+
+.encriptador #inputText::-webkit-scrollbar-thumb {
+  background-color: var(--dark-bluedark-blue-300);
+  border-radius: 4px;
+}
+
+.encriptador #inputText::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-bluedark-blue-500);
+
+}
+
+
+
+.reset-button {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  padding: 12px;
+  width: 250px;
+  top: 370px;
+  right: 15px;
+  justify-content: center;
+  font-family: "Inter", Helvetica;
+  transform: translateY(-50%);
+  background-color: var(--dark-bluedark-blue-300);
+  border-radius: 15px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  text-align: center;
+  line-height: normal;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.reset-button:hover {
+  background-color: var(--dark-bluedark-blue-500);
 }

@@ -18,6 +18,10 @@ function mostrarCampoTexto() {
   inputText.style.lineHeight = "35px";
   inputText.style.border = "none";
   inputText.style.resize = "none"; // Evita que el usuario pueda redimensionar el textarea
+
+  // Enfocar el campo de entrada de texto para que el usuario pueda empezar a escribir de inmediato
+  inputText.focus();
+
 }
 
 function ajustarAltura(input) {
@@ -26,19 +30,7 @@ function ajustarAltura(input) {
   input.style.height = (input.scrollHeight) + "px";
 }
 
-function actualizarEstadoBotones() {
-  var inputText = document.getElementById("inputText");
-  var encriptarButton = document.getElementById("encriptarButton");
-  var desencriptarButton = document.getElementById("desencriptarButton");
 
-  if (inputText.value.trim() === "") {
-    encriptarButton.disabled = true;
-    desencriptarButton.disabled = true;
-  } else {
-    encriptarButton.disabled = false;
-    desencriptarButton.disabled = false;
-  }
-}
 
 function encriptarTexto() {
   // Capturar el texto ingresado por el usuario
@@ -64,12 +56,6 @@ function encriptarTexto() {
 
   // Limpiar el campo de texto después de encriptar el texto
   document.getElementById("inputText").value = "";
-
-  // Ocultar el cuadro de texto y mostrar el párrafo de "Ingresar texto aquí"
-  var inputText = document.getElementById("inputText");
-  var displayText = document.getElementById("displayText");
-  inputText.style.display = "none";
-  displayText.style.display = "block";
 }
 
 function desencriptarTexto() {
@@ -89,11 +75,6 @@ function desencriptarTexto() {
 
   // Limpiar el campo de texto después de desencriptar el texto
   document.getElementById("inputText").value = "";
-
-  var inputText = document.getElementById("inputText");
-  var displayText = document.getElementById("displayText");
-  inputText.style.display = "none";
-  displayText.style.display = "block";
 }
 
 function copiarTexto() {
@@ -112,6 +93,23 @@ function copiarTexto() {
   // Eliminar el elemento de texto temporal
   document.body.removeChild(textarea);
 }
+
+function restablecer() {
+  // Mostrar el frame-3 y ocultar el overlap-group
+  var frame3 = document.querySelector(".frame-3");
+  frame3.style.display = "block";
+
+  var overlapGroup = document.querySelector(".overlap-group");
+  overlapGroup.style.display = "none";
+
+  // Limpiar el campo de texto y mostrar el párrafo de "Ingresar texto aquí"
+  var inputText = document.getElementById("inputText");
+  var displayText = document.getElementById("displayText");
+  inputText.style.display = "none";
+  displayText.style.display = "block";
+}
+
+
 
 
 
