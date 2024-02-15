@@ -1,65 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+}
+
 .encriptador {
-  background-color: #f3f5fc;
+  background-color: var(--light-bluelight-blue-100);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100vh;
 }
 
-.encriptador .div {
-  background-color: var(--light-bluelight-blue-100);
-  width: 100%;
-  height: 530px;
+.encriptador .logo {
   position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 30px;
+  left: 30px;
 }
-
 
 .encriptador .text-wrapper {
-  position: relative;
+  position: absolute;
   width: 600px;
-  top: 90px;
+  top: 20%;
+  left: 15%;
+  max-height: 260px;
   font-family: "Inter", Helvetica;
   font-weight: 200;
   color: var(--dark-bluedark-blue-300);
   font-size: 23px;
   letter-spacing: 0;
-  left: 150px;
   line-height: 25px;
   height: auto;
 }
 
-.encriptador .text-wrapper textarea {
+#inputText {
   max-height: 200px;
-  /* Por ejemplo, ajusta este valor según tus necesidades */
-  overflow-y: auto;
 }
 
-
 .encriptador .frame {
-  display: flex;
-  width: 680px;
-  align-items: flex-start;
-  gap: 24px;
   position: absolute;
-  top: 450px;
-  left: 150px;
+  align-items: flex-start;
+  display: flex;
+  width: 80%;
+  gap: 24px;
+  top: 85%;
+  left: 15%;
 }
 
 .encriptador .button-2 {
-  all: unset;
   box-sizing: border-box;
   position: relative;
   display: flex;
-  padding: 12px;
-  width: 250px;
+  padding: 10px;
+  width: 25%;
   justify-content: center;
   font-family: "Inter", Helvetica;
   color: var(--white);
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   line-height: normal;
   background-color: var(--dark-bluedark-blue-300);
   border-radius: 15px;
+  border: 1px solid;
   cursor: pointer;
 }
 
@@ -67,48 +73,28 @@
   background-color: var(--dark-bluedark-blue-500);
 }
 
-
 .encriptador .button-3 {
-  all: unset;
   box-sizing: border-box;
   position: relative;
   display: flex;
-  padding: 12px;
-  width: 250px;
+  padding: 10px;
+  width: 25%;
   justify-content: center;
   font-family: "Inter", Helvetica;
-  color: var(--dark-bluedark-blue-300);
-  font-size: 14px;
+  font-size: 15px;
+  text-align: center;
   line-height: normal;
-  border-radius: 15px;
+  color: var(--dark-bluedark-blue-300);
   background-color: var(--light-bluelight-blue-300);
   border: 1px solid;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .button-3:hover {
   background-color: var(--white);
 }
 
-.encriptador .button {
-  position: absolute;
-  top: 300px;
-  right: 15px;
-  box-sizing: border-box;
-  display: flex;
-  padding: 12px;
-  width: 250px;
-  justify-content: center;
-  font-family: "Inter", Helvetica;
-  color: var(--dark-bluedark-blue-300);
-  font-size: 14px;
-  text-align: center;
-  line-height: normal;
-  border-radius: 15px;
-  background-color: var(--white);
-  border: 1px solid;
-  cursor: pointer;
-}
 
 .button:hover {
   background-color: var(--light-bluelight-blue-300);
@@ -119,8 +105,8 @@
   align-items: center;
   gap: 8px;
   position: absolute;
-  top: 425px;
-  left: 150px;
+  top: 81%;
+  left: 15%;
 }
 
 .encriptador .bi-exclamation {
@@ -145,89 +131,77 @@
 
 .encriptador .frame-3 {
   position: absolute;
-  right: 50px;
+  right: 5%;
   display: flex;
+  padding: 10px;
   flex-direction: column;
-  width: 280px;
-  height: 380px;
-  align-items: flex-start;
+  align-items: center;
+  width: 22%;
+  height: 70%;
   gap: 10px;
-  top: 110px;
+  top: 18%;
   background-color: var(--light-bluelight-blue-100);
   border-radius: 32px;
   box-shadow: var(--shadow);
 }
 
-
-.encriptador .muñeco {
+.frame-3 .muñeco {
   width: 100%;
 }
 
-
-.encriptador .text-wrapper-2 {
+.frame-3 .text-wrapper-2 {
   position: relative;
+  width: 100%;
   align-self: stretch;
-  margin-top: -1px;
   font-family: "Inter", Helvetica;
   font-weight: 700;
   color: var(--graygray-500);
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   letter-spacing: 0;
   line-height: 28.8px;
 }
 
-.encriptador .text-wrapper-3 {
+.frame-3 .text-wrapper-3 {
   position: relative;
   align-self: stretch;
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: var(--graygray-400);
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   letter-spacing: 0;
   line-height: 24px;
 }
 
-.encriptador .text-wrapper-4 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  padding: 25px;
-  color: var(--shadow);
-  font-size: 15px;
-  text-align: left;
-  letter-spacing: 0;
-  line-height: 25px;
-}
-
-.encriptador .logo {
-  position: absolute;
-  width: 80px;
-  height: 30px;
-  top: 30px;
-  left: 30px;
-}
-
 .encriptador .overlap-group {
   display: none;
   position: absolute;
-  width: 280px;
-  height: 400px;
+  width: 22%;
+  height: 76%;
   top: 90px;
-  right: 50px;
+  right: 5%;
   background-color: var(--white);
   border-radius: 32px;
   box-shadow: var(--shadow);
 }
 
-.encriptador .text-wrapper-4 {
+
+.overlap-group .text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter", Helvetica;
+  font-weight: 300;
+  padding: 20px;
   max-height: 260px;
   overflow-y: auto;
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: 5%;
+  color: var(--shadow);
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 23px;
 }
 
 .encriptador .text-wrapper-4::-webkit-scrollbar {
@@ -247,7 +221,6 @@
   background-color: var(--dark-bluedark-blue-500);
 }
 
-
 .encriptador #inputText::-webkit-scrollbar {
   width: 8px;
 }
@@ -263,19 +236,17 @@
 
 .encriptador #inputText::-webkit-scrollbar-thumb:hover {
   background-color: var(--dark-bluedark-blue-500);
-
 }
 
-
-
-.reset-button {
+.overlap-group .reset-button {
   position: absolute;
+  right: 15px;
   box-sizing: border-box;
   display: flex;
-  padding: 12px;
-  width: 250px;
-  top: 370px;
-  right: 15px;
+  padding: 10px;
+  width: 87%;
+  top: 92%;
+  font-size: 14px;
   justify-content: center;
   font-family: "Inter", Helvetica;
   transform: translateY(-50%);
@@ -283,7 +254,6 @@
   border-radius: 15px;
   color: white;
   border: none;
-  font-size: 14px;
   text-align: center;
   line-height: normal;
   border-radius: 15px;
@@ -293,4 +263,269 @@
 
 .reset-button:hover {
   background-color: var(--dark-bluedark-blue-500);
+}
+
+.encriptador .button {
+  position: absolute;
+  right: 15px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+  width: 87%;
+  top: 75%;
+  font-size: 14px;
+  justify-content: center;
+  font-family: "Inter", Helvetica;
+  color: var(--dark-bluedark-blue-300);
+  text-align: center;
+  line-height: normal;
+  border-radius: 15px;
+  background-color: var(--white);
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--light-bluelight-blue-300);
+}
+
+@media (max-width: 1024px) {
+  .encriptador {
+    height: 100vh;
+  }
+
+  .encriptador .logo {
+    width: 140px;
+    height: auto;
+    left: 1%;
+    top: 4%;
+  }
+
+  .encriptador .text-wrapper {
+    top: 25%;
+    width: 90%;
+    left: 5%;
+    font-size: 40px;
+  }
+
+  #inputText {
+    font-size: 35px !important;
+    width: 670px !important;
+    max-height: 200px;
+  }
+
+  .encriptador .frame-2 {
+    width: 80%;
+    left: 5%;
+    top: 45%;
+  }
+
+  .frame-2 .bi-exclamation {
+    width: 20px;
+    height: 20px;
+  }
+
+  .encriptador .frame-2 .p {
+    width: fit-content;
+    font-size: 16px;
+  }
+
+  .encriptador .frame {
+    align-items: flex-start;
+    width: 90%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    top: 60%;
+
+  }
+
+  .frame .button-2,
+  .frame .button-3 {
+    width: 400px;
+    height: 80px;
+    border-radius: 25px;
+    line-height: 60px;
+    font-size: 23px;
+    border: 1px solid;
+  }
+
+  .encriptador .frame-3 {
+    align-items: center;
+    top: 85%;
+    width: 90%;
+    height: 12%;
+    background-color: var(--white);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .encriptador .frame-3 .muñeco {
+    display: none;
+  }
+
+  .frame-3 .text-wrapper-2 {
+    top: 20%;
+    font-size: 30px;
+  }
+
+  .frame-3 .text-wrapper-3 {
+    top: 20%;
+    font-size: 20px;
+  }
+
+  .encriptador .overlap-group {
+    width: 90%;
+    left: 5%;
+    max-width: 921px;
+    font-size: 18px;
+    top: 70%;
+    height: 27%;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .overlap-group .text-wrapper-4 {
+    font-size: 25px !important;
+    max-height: 180px;
+    top: 8%;
+  }
+
+  .overlap-group .button {
+    position: absolute;
+    top: 78%;
+    left: 12%;
+    font-size: 18px;
+    transform: translate(-20%, -10%);
+    width: 45%;
+    height: 18%;
+    line-height: 30px;
+  }
+
+  .overlap-group .reset-button {
+    position: absolute;
+    width: 45%;
+    height: 18%;
+    font-size: 18px;
+    line-height: 30px;
+    top: 78%;
+    right: 3%;
+    transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 412px) {
+
+  .encriptador {
+    height: 100vh;
+  }
+
+  .encriptador .logo {
+    width: 140px;
+    left: -8%;
+    height: auto;
+    top: 20px;
+  }
+
+  .encriptador .text-wrapper {
+    width: 90%;
+    top: 20%;
+    left: 5%;
+    font-size: 35px;
+    line-height: 28px;
+  }
+
+  #inputText {
+    font-size: 25px !important;
+    max-width: 370px;
+    max-height: 250px;
+  }
+
+  .encriptador .frame-2 {
+    width: 90%;
+    left: 5%;
+    top: 50%;
+  }
+
+  .encriptador .frame-2 .p {
+    font-size: 12px;
+  }
+
+  .encriptador .frame {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    left: 5%;
+    top: 55%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .frame .button-2,
+  .frame .button-3 {
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    line-height: 40px;
+    font-size: 20px;
+    border: 1px solid;
+  }
+
+  .encriptador .frame-3 {
+    align-items: center;
+    top: 72%;
+    width: 90%;
+    height: 25%;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .frame-3 .text-wrapper-2 {
+    top: 40px;
+    font-size: 30px;
+  }
+
+  .frame-3 .text-wrapper-3 {
+    top: 50px;
+    font-size: 20px;
+  }
+
+  .encriptador .overlap-group {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    left: 5%;
+    font-size: 16px;
+    top: 75%;
+    height: 550px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .overlap-group .text-wrapper-4 {
+    font-size: 25px !important;
+    max-height: 380px;
+    top: 5%;
+  }
+
+  .overlap-group .button,
+  .overlap-group .reset-button {
+    width: 90%;
+    height: 43px;
+    font-size: 18px;
+    line-height: 25px;
+    border: 1px solid;
+  }
+
+  .overlap-group .button {
+    left: 23%;
+    top: 440px;
+  }
+
+  .overlap-group .reset-button {
+    right: 5%;
+    top: 490px;
+  }
+
+
 }
