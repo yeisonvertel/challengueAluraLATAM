@@ -10,32 +10,24 @@
 </head>
 
 <body>
-  <!-- Contenedor principal del encriptador -->
   <div class="encriptador">
-    <!-- Área para ingresar texto -->
     <div class="text-wrapper" onclick="mostrarCampoTexto()">
-      <!-- Texto predeterminado o indicación -->
       <p id="displayText">Ingrese el texto aquí</p>
-      <!-- Área de entrada de texto -->
       <textarea id="inputText" style="display: none;" oninput="ajustarAltura(this)"></textarea>
     </div>
-    <!-- Botones para encriptar y desencriptar -->
     <div class="frame">
       <button class="button-2" onclick="encriptarTexto()">Encriptar</button>
       <button class="button-3" onclick="desencriptarTexto()">Desencriptar</button>
     </div>
-    <!-- Mensaje de advertencia -->
     <div class="frame-2">
       <img class="bi-exclamation" src="img/bi-exclamation-circle-fill.svg" />
       <p class="p">Solo letras minúsculas y sin acentos</p>
     </div>
-    <!-- Sección para mensajes y elementos gráficos adicionales -->
     <div class="frame-3">
       <img class="muñeco" src="img/Muñeco.png" />
       <div class="text-wrapper-2">Ningún mensaje fue encontrado</div>
       <p class="text-wrapper-3">Ingresa el texto que desees encriptar o desencriptar.</p>
     </div>
-    <!-- Sección superpuesta para mostrar texto encriptado y botones adicionales -->
     <div class="overlap-group" style="display: none;">
       <p class="text-wrapper-4"></p>
       <button class="button" onclick="copiarTexto()">Copiar</button>
