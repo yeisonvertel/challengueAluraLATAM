@@ -296,6 +296,7 @@ body {
 
   .encriptador .logo {
     width: 140px;
+    left: 0;
     height: auto;
     top: 4%;
   }
