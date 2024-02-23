@@ -469,10 +469,11 @@ body {
   }
 
   .encriptador .frame-3 {
+    position: absolute;
     align-items: center;
-    top: 72%;
     width: 90%;
     height: 25%;
+    top: 72%;
     background-color: var(--white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -495,10 +496,9 @@ body {
     width: 90%;
     left: 5%;
     font-size: 16px;
-    top: 75%;
+    top: 72%;
     height: 550px;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-
   }
 
   .overlap-group .text-wrapper-4 {
